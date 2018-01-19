@@ -63,18 +63,38 @@ Testes de aceitação:
 Testes de unidade:
 	Usuário:
 		deve_conseguir_se_autenticar
-		deve_ter_um_papel
+		deve_ter_um_conjunto_de_papeis
+	Item do Menu:
+		deve_ter_um_titulo
+		deve_ter_uma_descricao
+		deve_retornar_uma_visibilidade_para_todo_papel
+			- Talvez seja melhor assim (mas parece que eu estou amarrando a implementação):
+				deve_ter_um_conjunto_de_papeis_no_qual_ele_e_visivel
+		deve_conseguir_definir_sua_visibilidade_a_partir_de_um_usuario
+			- Talvez seja melhor fazer a partir do papel, mas ainda acho que usuario faz mais sentido
+	Papel:
+		deve_conter_um_conjunto_de_usuarios
+		deve_conseguir_autorizar_um_usuario
+
 
 
 Dúvidas:
 	- O gerente é um coordenador supervisor?
+		* Não, os papéis não *são* os outros.
 	- O coordenador supervisor é um analista?
+		* Não, os papéis não *são* os outros.
 	- O analista é um assistente?
-	
+		* Não, os papéis não *são* os outros.
+
 	- Quais são os atributos de cada um dos papéis ou dos usuários?
+		* Nada de diferente, por enquanto
+
 	- Talvez fazer os testes de aceitação por página, tipo:
 		Página de emissão de NF
 			gerentes_devem_conseguir_acessar_a_pagina
 			coordenardores_supervisores_devem_conseguir_acessar_a_pagina
 			analistas_nao_devem_conseguir_acessar_a_pagina
 			assistentes_nao_devem_conseguir_acessar_a_pagina
+		* Melhor não pois vai ser uma página só com vários itens diferentes no menu.
+
+	- Fazendo desse jeito, onde o item define sua visibilidade, a restrição de um certo papel a uma página não seria apenas pelo link? Ou seja, se um certo usuário descobre o link para uma operação à qual ele não é autorizado ele não conseguiria acessá-la?
