@@ -1,0 +1,80 @@
+Testes de aceitação:
+
+	Gerente:
+		deve_conseguir_emitir_nf
+
+		deve_conseguir_lancar_pedidos
+
+		deve_conseguir_visualizar_produtos
+		deve_conseguir_incluir_produtos
+		deve_conseguir_excluir_produtos
+		deve_conseguir_copiar_produtos
+
+		deve_conseguir_visualizar_clientes
+		deve_conseguir_incluir_clientes
+		deve_conseguir_excluir_clientes
+		deve_conseguir_copiar_clientes
+
+	Coordenador Supervisor:
+		deve_conseguir_emitir_nf
+
+		deve_conseguir_lancar_pedidos
+
+		deve_conseguir_visualizar_produtos
+		deve_conseguir_incluir_produtos
+		deve_conseguir_excluir_produtos
+		deve_conseguir_copiar_produtos
+
+		deve_conseguir_visualizar_clientes
+		nao_deve_conseguir_incluir_clientes
+		nao_deve_conseguir_excluir_clientes
+		nao_deve_conseguir_copiar_clientes
+
+	Analista:
+		deve_conseguir_emitir_nf
+
+		nao_deve_conseguir_lancar_pedidos
+
+		deve_conseguir_visualizar_produtos
+		deve_conseguir_incluir_produtos
+		deve_conseguir_excluir_produtos
+		deve_conseguir_copiar_produtos
+
+		deve_conseguir_visualizar_clientes
+		nao_deve_conseguir_incluir_clientes
+		nao_deve_conseguir_excluir_clientes
+		nao_deve_conseguir_copiar_clientes
+
+	Assistente:
+		nao_deve_conseguir_emitir_nf
+
+		nao_deve_conseguir_lancar_pedidos
+
+		deve_conseguir_visualizar_produtos
+		nao_deve_conseguir_incluir_produtos
+		nao_deve_conseguir_excluir_produtos
+		nao_deve_conseguir_copiar_produtos
+
+		deve_conseguir_visualizar_clientes
+		nao_deve_conseguir_incluir_clientes
+		nao_deve_conseguir_excluir_clientes
+		nao_deve_conseguir_copiar_clientes
+
+Testes de unidade:
+	Usuário:
+		deve_conseguir_se_autenticar
+		deve_ter_um_papel
+
+
+Dúvidas:
+	- O gerente é um coordenador supervisor?
+	- O coordenador supervisor é um analista?
+	- O analista é um assistente?
+	
+	- Quais são os atributos de cada um dos papéis ou dos usuários?
+	- Talvez fazer os testes de aceitação por página, tipo:
+		Página de emissão de NF
+			gerentes_devem_conseguir_acessar_a_pagina
+			coordenardores_supervisores_devem_conseguir_acessar_a_pagina
+			analistas_nao_devem_conseguir_acessar_a_pagina
+			assistentes_nao_devem_conseguir_acessar_a_pagina
