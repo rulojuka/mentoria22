@@ -67,14 +67,13 @@ Testes de unidade:
 	Item do Menu:
 		deve_ter_um_titulo
 		deve_ter_uma_descricao
-		deve_retornar_uma_visibilidade_para_todo_papel
-			- Talvez seja melhor assim (mas parece que eu estou amarrando a implementação):
-				deve_ter_um_conjunto_de_papeis_no_qual_ele_e_visivel
+		deve_retornar_uma_visibilidade
 		deve_conseguir_definir_sua_visibilidade_a_partir_de_um_usuario
-			- Talvez seja melhor fazer a partir do papel, mas ainda acho que usuario faz mais sentido
 	Papel:
 		deve_conter_um_conjunto_de_usuarios
 		deve_conseguir_autorizar_um_usuario
+	Visibilidade:
+		deve_retornar_se_um_usuario_eh_visivel_para_si_mesma
 
 
 
@@ -98,3 +97,4 @@ Dúvidas:
 		* Melhor não pois vai ser uma página só com vários itens diferentes no menu.
 
 	- Fazendo desse jeito, onde o item define sua visibilidade, a restrição de um certo papel a uma página não seria apenas pelo link? Ou seja, se um certo usuário descobre o link para uma operação à qual ele não é autorizado ele não conseguiria acessá-la?
+		* O usuário não deve poder acessar uma página não autorizada, mesmo com o link.
